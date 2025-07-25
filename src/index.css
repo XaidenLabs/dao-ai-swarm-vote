@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DAO Automation Dashboard Design System */
+
+@layer base {
+  :root {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 40% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 40% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 262 83% 68%;
+
+    --secondary: 215 27% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 27% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 197 71% 52%;
+    --accent-foreground: 222 47% 5%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 210 40% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 47% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 27% 17%;
+    --input: 215 27% 17%;
+    --ring: 262 83% 58%;
+
+  /* AI Theme Colors */
+  --ai-cyan: 180 100% 70%;
+  --ai-purple: 270 95% 75%;
+  --ai-green: 120 100% 75%;
+  --ai-orange: 25 95% 65%;
+  --ai-pink: 320 85% 75%;
+
+  /* Wallet Adapter Overrides */
+  .wallet-adapter-button-trigger {
+    background: transparent;
+  }
+  
+  .wallet-adapter-button {
+    background: hsl(var(--primary)) !important;
+    border: 1px solid hsl(var(--border)) !important;
+    border-radius: 0.5rem !important;
+    font-size: 0.875rem !important;
+    height: 2rem !important;
+    padding: 0 0.75rem !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  .wallet-adapter-button:hover {
+    background: hsl(var(--primary)/0.9) !important;
+  }
+  
+  .wallet-adapter-button-end-icon,
+  .wallet-adapter-button-start-icon {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--ai-purple)), hsl(var(--ai-cyan)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--ai-cyan)), hsl(var(--ai-green)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(215 27% 12%));
+    
+    /* Shadows and glows */
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+    --shadow-card: 0 8px 32px hsl(222 47% 2% / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
